@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#5A3A2A">
+  <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="stylesheet" href="./css/style.css">
+  <title>Carimbo | Memória</title>
+</head>
+<body>
+  <header class="topo">
+    <h1 class="recorte" data-texto="Memória"></h1>
+    <p class="sub">um pedacinho da viagem</p>
+  </header>
+
+  <main>
+    <article id="memoria" class="papel fita">
+      <p class="vazio nota">Carregando memória...</p>
+      <!-- O conteúdo (foto, título, nota, coordenadas) será preenchido via JS usando ?id= -->
+    </article>
+
+    <section class="papel">
+      <button id="btn-favoritar" class="btn claro">★ Favoritar</button>
+      <button id="btn-excluir" class="btn">🗑 Excluir</button>
+      <a href="album.html" class="btn sec">← Voltar ao álbum</a>
+    </section>
+  </main>
+
+  <nav class="nav">
+    <a href="index.html"><span class="ico">🏠</span>Início</a>
+    <a href="nova.html"><span class="ico">📸</span>Nova</a>
+    <a href="album.html" class="ativo"><span class="ico">📒</span>Álbum</a>
+    <a href="config.html"><span class="ico">⚙️</span>Ajustes</a>
+  </nav>
+
+  <script src="./js/app.js"></script>
+</body>
+</html>

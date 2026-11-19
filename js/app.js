@@ -31,3 +31,23 @@ if ('serviceWorker' in navigator) {
     .then(() => console.log('Service Worker registrado!'))
     .catch(erro => console.error('Erro ao registrar:', erro));
 }
+
+let eventoInstalacao = null;
+
+window.addEventListener('beforeinstallprompt', e => {
+  e.preventDefault();
+  eventoInstalacao = e;
+  const btn = document.querySelector('#btn-instalar');
+  if (btn) btn.hidden = false;
+});
+
+const btnInstalar = document.querySelector('#btn-instalar');
+if (btnInstalar) {
+  btnInstalar.addEventListener('click', async () => {
+    if (!eventoInstalacao) return;
+    eventoInstalacao.prompt();
+    await eventoInstalacao.userChoice;
+    eventoInstalacao = null;
+    btnInstalar.hidden = true;
+  });
+}

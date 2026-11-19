@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Playfair+Display:wght@400;700&family=Special+Elite&display=swap');
+
+:root {
+  --creme: #F3EBDD;
+  --salvia: #DDE3C8;
+  --tijolo: #A63A32;
+  --oliva: #6B7A3A;
+  --mostarda: #D9A23B;
+  --marrom: #5A3A2A;
+  --azul: #5C7A99;
+  --sombra: 0 6px 16px rgba(90, 58, 42, .18);
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: 'Playfair Display', Georgia, serif;
+  color: var(--marrom);
+  background: var(--salvia);
+  background-image:
+    linear-gradient(rgba(90,58,42,.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(90,58,42,.05) 1px, transparent 1px);
+  background-size: 24px 24px;
+  min-height: 100vh;
+  padding-bottom: 80px; 
+}
+
+
+.topo {
+  text-align: center;
+  padding: 28px 16px 8px;
+}
+.topo .sub {
+  font-family: 'Caveat', cursive;
+  font-size: 1.4rem;
+  color: var(--tijolo);
+  margin: 4px 0 0;
+}
+
+
+.recorte { display: inline-flex; flex-wrap: wrap; justify-content: center; gap: 4px; margin: 0; }
+.recorte span {
+  display: inline-block;
+  padding: 2px 8px;
+  font-size: 2.2rem;
+  line-height: 1.1;
+  box-shadow: 1px 2px 4px rgba(0,0,0,.25);
+}
+.recorte .espaco { background: none; box-shadow: none; width: 10px; padding: 0; }
+
+
+main { max-width: 720px; margin: 0 auto; padding: 16px; }
+
+.papel {
+  background: var(--creme);
+  border-radius: 22px;
+  padding: 22px;
+  margin-bottom: 22px;
+  box-shadow: var(--sombra);
+  position: relative;
+}
+.papel h2 { margin-top: 0; font-size: 1.5rem; }
+
+
+.papel.fita::before {
+  content: "";
+  position: absolute;
+  top: -12px; left: 50%;
+  width: 90px; height: 26px;
+  background: rgba(217,162,59,.55);
+  transform: translateX(-50%) rotate(-3deg);
+}
+
+.nota { font-family: 'Caveat', cursive; font-size: 1.4rem; color: var(--azul); }
+.carimbo { font-family: 'Special Elite', monospace; font-size: .85rem; color: var(--tijolo); letter-spacing: 1px; }
+
+
+.btn {
+  display: inline-block;
+  border: 0;
+  border-radius: 999px;
+  padding: 12px 24px;
+  background: var(--tijolo);
+  color: var(--creme);
+  font-family: 'Special Elite', monospace;
+  font-size: 1rem;
+  cursor: pointer;
+  text-decoration: none;
+  box-shadow: var(--sombra);
+}
+.btn:active { transform: scale(.97); }
+.btn.sec { background: var(--oliva); }
+.btn.claro { background: var(--mostarda); color: var(--marrom); }
+
+
+form { display: flex; flex-direction: column; gap: 14px; }
+label { font-family: 'Special Elite', monospace; font-size: .9rem; }
+input, textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border: 2px dashed var(--marrom);
+  border-radius: 14px;
+  background: #fffaf0;
+  font-family: 'Caveat', cursive;
+  font-size: 1.3rem;
+  color: var(--marrom);
+}
+textarea { min-height: 110px; resize: vertical; }
+
+
+.grade {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+  gap: 22px;
+}
+.polaroid {
+  background: #fff;
+  padding: 10px 10px 16px;
+  border-radius: 6px;
+  box-shadow: var(--sombra);
+  text-decoration: none;
+  color: var(--marrom);
+  transition: transform .2s;
+}
+.polaroid:nth-child(odd)  { transform: rotate(-2deg); }
+.polaroid:nth-child(even) { transform: rotate(2deg); }
+.polaroid:hover { transform: rotate(0) scale(1.03); }
+.polaroid img {
+  width: 100%; aspect-ratio: 1; object-fit: cover; display: block;
+  background: var(--salvia);
+}
+.polaroid .legenda { font-family: 'Caveat', cursive; font-size: 1.3rem; margin-top: 8px; }
+
+.vazio { text-align: center; padding: 30px 10px; }
+
+
+.nav {
+  position: fixed; bottom: 0; left: 0; right: 0;
+  display: flex; justify-content: space-around;
+  background: var(--marrom);
+  padding: 10px 6px;
+  border-radius: 22px 22px 0 0;
+  box-shadow: 0 -4px 14px rgba(0,0,0,.25);
+}
+.nav a {
+  color: var(--creme);
+  text-decoration: none;
+  font-family: 'Special Elite', monospace;
+  font-size: .8rem;
+  text-align: center;
+  padding: 6px 10px;
+  border-radius: 999px;
+}
+.nav a .ico { display: block; font-size: 1.3rem; }
+.nav a.ativo { background: var(--mostarda); color: var(--marrom); }
+
+
+@media (min-width: 700px) {
+  .recorte span { font-size: 3rem; }
+  .nav { max-width: 520px; margin: 0 auto; border-radius: 22px; bottom: 12px; }
+}

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#5A3A2A">
+  <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="stylesheet" href="./css/style.css">
+  <title>Carimbo | Ajustes</title>
+</head>
+<body>
+  <header class="topo">
+    <h1 class="recorte" data-texto="Ajustes"></h1>
+    <p class="sub">deixe o app com a sua cara</p>
+  </header>
+
+  <main>
+    <section class="papel fita">
+      <h2>Perfil</h2>
+      <form id="form-perfil">
+        <div>
+          <label for="nome">Nome do viajante</label>
+          <input type="text" id="nome" placeholder="Seu nome">
+        </div>
+        <button type="submit" class="btn">Salvar</button>
+      </form>
+    </section>
+
+    <section class="papel">
+      <h2>Lembrete diário</h2>
+      <p class="nota">Receba um aviso para registrar o seu dia.</p>
+      <form id="form-lembrete">
+        <div>
+          <label for="hora">Horário do lembrete</label>
+          <input type="time" id="hora" value="20:00">
+        </div>
+        <button type="button" id="btn-ativar" class="btn sec">🔔 Ativar notificações</button>
+        <button type="button" id="btn-teste" class="btn claro">Enviar notificação de teste</button>
+        <p id="status-notif" class="carimbo">Notificações desativadas.</p>
+      </form>
+    </section>
+
+    <section class="papel">
+      <h2>Instalar app</h2>
+      <p class="nota">Adicione o Carimbo à sua tela inicial.</p>
+      <button id="btn-instalar" class="btn" hidden>⬇ Instalar</button>
+    </section>
+  </main>
+
+  <nav class="nav">
+    <a href="index.html"><span class="ico">🏠</span>Início</a>
+    <a href="nova.html"><span class="ico">📸</span>Nova</a>
+    <a href="album.html"><span class="ico">📒</span>Álbum</a>
+    <a href="config.html" class="ativo"><span class="ico">⚙️</span>Ajustes</a>
+  </nav>
+
+  <script src="./js/app.js"></script>
+</body>
+</html>

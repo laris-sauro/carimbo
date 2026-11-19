@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#5A3A2A">
+  <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="stylesheet" href="./css/style.css">
+  <title>Carimbo | Álbum</title>
+</head>
+<body>
+  <header class="topo">
+    <h1 class="recorte" data-texto="Álbum"></h1>
+    <p class="sub">todas as suas lembranças</p>
+  </header>
+
+  <main>
+    <section class="papel fita">
+      <a href="#" id="filtro-todas" class="btn">Todas</a>
+      <a href="#" id="filtro-fav" class="btn claro">★ Favoritas</a>
+    </section>
+
+    <section class="papel">
+      <div id="lista-memorias" class="grade">
+        <p class="vazio nota">Seu álbum está vazio por enquanto.</p>
+      </div>
+    </section>
+  </main>
+
+  <nav class="nav">
+    <a href="index.html"><span class="ico">🏠</span>Início</a>
+    <a href="nova.html"><span class="ico">📸</span>Nova</a>
+    <a href="album.html" class="ativo"><span class="ico">📒</span>Álbum</a>
+    <a href="config.html"><span class="ico">⚙️</span>Ajustes</a>
+  </nav>
+
+  <script src="./js/app.js"></script>
+</body>
+</html>

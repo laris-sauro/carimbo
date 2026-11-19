@@ -1,8 +1,6 @@
-const VERSAO = 'v1';
+const VERSAO = 'v2';
 const CACHE_ESTATICO = `carimbo-estatico-${VERSAO}`;
 const CACHE_FONTES = `carimbo-fontes-${VERSAO}`;
-
-
 const APP_SHELL = [
   './',
   './index.html',
@@ -14,7 +12,9 @@ const APP_SHELL = [
   './js/app.js',
   './manifest.webmanifest',
   './icons/icon-192.png',
-  './icons/icon-512.png'
+  './icons/icon-512.png',
+  './js/db.js',
+  './js/memorias.js',
 ];
 
 
